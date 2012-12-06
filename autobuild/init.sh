@@ -4,5 +4,5 @@ rm -Rf build
 rm latesthash
 mkdir tmp
 mkdir build
-git clone https://github.com/daniw/fosamath tmp
+git clone https://github.com/daniw/testatmath tmp
 touch latesthash
