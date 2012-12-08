@@ -1,4 +1,28 @@
 % coding:utf-8
+\section{Polynomfunktion}
+Punkt mit lokalem Extremwert: $(e,g)$\\
+Punkt mit Wendepunkt: $(h,i)$
+\[f(x) = a \cdot x^3 + b \cdot x^2 + c \cdot x + d\]
+\[f'(x) = 3 \cdot a \cdot x^2 + 2 \cdot b \cdot x + c\]
+\[f''(x) = 6 \cdot a \cdot x + 2 \cdot b\]
+\[f'''(x) = 6 \cdot a\]
+\[f(e) = g\]
+\[f'(e) = 0\]
+\[f''(e) \neq 0\]
+\[f(h) = i\]
+\[f''(h) = 0\]
+\[f'''(h) \neq 0\]
+Solve mit TR:
+\[\text{solve}\left(\begin{matrix}
+a \cdot e^3 + b \cdot e^2 + c \cdot e + d = g\\
+3 \cdot a \cdot e^2 + 2 \cdot b \cdot e + c = 0\\
+6 \cdot a \cdot e + 2 \cdot b \neq 0\\
+a \cdot h^3 + b \cdot h^2 + c \cdot h + d = i\\
+6 \cdot a \cdot x + 2 \cdot b\\
+6 \cdot a \neq 0
+\end{matrix} \quad ,a,b,c,d\right)\]
+\[f(x) = a \cdot x^3 + b \cdot x^2 + c \cdot x + d\]
+
 \section{Kettenlinie}
 Aufgabenstellung: 
 \[y(x) = a \cdot \cosh\left(\frac{x}{c}\right) + b\]
@@ -8,15 +32,16 @@ a)\\
 \[h = a \cdot \cosh\left(\frac{\ell}{c}\right) - a \cdot \underbrace{\cosh\left(\frac{x}{c}\right)}_1\]
 \[\rightarrow x = 0\]
 \[\Rightarrow h_{max} = a \cdot \cosh\left(\frac{\ell}{c}\right)-a\]
-\[\underline{\underline{h(\ell) = a \cosh\left(\frac{\ell}{c}\right) - 10}}\]
+\[\underline{\underline{h(\ell) = a \cosh\left(\frac{\ell}{c}\right) - a}}\]
 b)
-\[h(\ell_1) =a \cdot \cosh\left(\frac{\ell}{c}\right) - 10\]
+\[h(\ell_1) =a \cdot \cosh\left(\frac{\ell}{c}\right) - a\]
 \[\cosh\left(\frac{\ell}{c}\right) = \frac{h(\ell_1 + a}{a}\]
 \[\Rightarrow \underline{\underline{\arccosh\left(\frac{h(\ell_1 + a}{a}\right) \cdot a}}\]
 c)
 \[m(\ell) = h'(\ell) = \sinh\left(\frac{\ell}{c}\right)\]
 \[m(\ell) = \tan(\beta) \quad\]
-\[\Rightarrow \underline{\underline{\alpha = \frac{\pi}{2} - \beta = \frac{\pi}{2} - \arctan(m(\ell)) = \frac{\pi}{2} - \arctan(\sinh\left(\frac{\ell}{c}\right))}}\]
+\[\Rightarrow \underline{\underline{\alpha = \frac{\pi}{2} - \beta = \frac{\pi}{2} - \arctan(m(\ell)) = \frac{\pi}{2} - \arctan\left(\sinh\left(\frac{\ell}{c}\right)\right)}}\]
+
 \section{Maximale Fläche}
 Aufgabenstellung: \\
 \includegraphics[width=0.8\textwidth]{bilder/maximale_flaeche.pdf}
@@ -43,6 +68,7 @@ $\rightarrow$ Weil die Fläche nur positiv sein kann, gilt nur $x \leq 0$
 \[A = 4 \sqrt{\frac{c}{2a}} \left(\frac{c - a \sqrt{\frac{c}{2a}}^2}{b}\right)^{\frac{1}{2}}\]
 \[A = 4 \sqrt{\frac{c}{2a} \left(\frac{c - a \frac{c}{2a}}{b}\right)}\]
 \[\underline{\underline{A = 2 \sqrt{\frac{c^2}{ab} } = \frac{2c}{\sqrt{ab}}}}\]
+
 \section{Statue}
 Aufgabenstellung: \\
 \includegraphics[width=0.8\textwidth]{bilder/statue.pdf}
@@ -63,3 +89,31 @@ Nun haben wir eine neue Unbekannte $\beta$. Diese muss eliminiert bzw. substitui
 \[ \Rightarrow \alpha = arctan\left(\frac{a+b}{d}\right) - \beta = arctan\left(\frac{a+b}{d}\right) - arctan\left(\frac{b}{d}\right) \]
 \[ \alpha' \stackrel{!}{=} 0 \rightarrow \alpha' = \frac{-(a+b)}{d^2 + (a+b)^2} + \frac{b}{d^2 + b^2} = 0 \]
 \[ \Rightarrow d = \sqrt{ab + b^2} \]
+
+\section{Implizites Ableiten}
+\[ x^3 + y^3 - a \cdot x \cdot y = 0 \]
+a)\\
+x und y in gegebene Formel einsetzen. Diese muss 0 werden, damit der entsprechende Punkt auf der Kurve liegt. 
+b)\\
+\[ x^3 + y^3 - a x y = 0 \]
+\[ y = y(x) \quad \text{$y$ mit $y(x)$ substituieren} \]
+\[ \rightarrow x^3 + y(x)^3 - a x y(x) = 0 \]
+Ableiten mit Kettenregel. $y(x)$ ist jeweils die innere Ableitung. 
+\[ \frac{dy}{dx} = 3x^2 + 3y(x)^2 \cdot y'(x) - a\left(y(x) + x \cdot y'(x)\right) = 0 \]
+\[ 3x^2 + 3y(x)^2 \cdot y'(x) - a \cdot y(x) - a \cdot x \cdot y'(x) = 0 \]
+\[ 3y(x)^2 \cdot y'(x) - a \cdot x \cdot y'(x) = - 3x^2 + a \cdot y(x) \quad \left|- 3x^2 + a \cdot y(x)\right.\]
+\[ y'(x) \cdot \left(3y(x)^2 \cdot - a \cdot x \right) = a \cdot y(x) - 3x^2 \quad |y'(x)\text{ ausklammern}\]
+\[ y'(x) = \frac{a \cdot y(x) - 3x^2}{3y(x)^2 \cdot - a \cdot x} \quad |:3y(x)^2 \cdot - a \cdot x \]
+\[ y' = \frac{a \cdot y - 3x^2}{3y^2 \cdot - a \cdot x} \quad |y(x) = y \]
+c)\\
+\[ T(x) = f'(x) \cdot (x - x_0) - f(x_0) \]
+\[ T(x) =  \frac{a \cdot y_0 - 3x_0^2}{3y_0^2 \cdot - a \cdot x_0} \cdot (x - x_0) - (x_0^3 + y_0^3 - a \cdot x_0 \cdot y_0) \]
+$x_0$ und $y_0$ aus Aufgabenstellung einsetzen. \\\\
+{\Huge Achtung! \\Fehler in Lösung. \\Wenn du den Fehler findest: \\Mail an: \href{mailto:daniel.winz@stud.hslu.ch}{daniw}}\\
+d)\\
+\[ f'(0) = 0 \]
+\[ \Rightarrow  \frac{a \cdot y - 3x^2}{3y^2 \cdot - a \cdot x} = 0 \]
+\[ x^3 + y3 - a \cdot x \cdot y = 0 \]
+2 Gleichungen, 2 Unbekannte: Solve mit TR. \\
+\[ \Rightarrow x = a \cdot \frac{\sqrt[3]{2}}{3}\]
+\[ \Rightarrow y = a \cdot \frac{\sqrt[3]{2^2}}{3}\]
