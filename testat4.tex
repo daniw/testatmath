@@ -103,3 +103,29 @@ b)
 \section{Zykloide}
 
 \section{Fahrzeug}
+\includegraphics[width=0.8\textwidth]{bilder/fahrzeug_svg.pdf}
+a)
+\[ s = s_1 + s_2 + s_3 \]
+\[ s_1 = \int_0^{t_1} v(t) dt = \int_0^{t_1} \left( \frac{v_{max}}{t_1} \cdot t \right) dt = \left. \frac{v_{max} \cdot t^2}{2 t_1} \right|_0^{t_1} = \frac{v_{max} \cdot {t_1}^2}{2 t_1} = \frac{v_{max} \cdot {t_1}}{2} \]
+\[ s_2 = \int_{t_1}^{t_2} v_{max} dt = t_2 \cdot v_{max} - t_1 \cdot v_{max} = v_{max} \cdot (t_2 - t_1) = v_{max} \cdot t_{1,2} \]
+\[ s_3 = \int_{t_2}^{t_3} \left(-\frac{v_{max}}{t_{2,3}} \cdot (t - t_{0,1} - t_{1,2} - t_{2,3})\right) dt = \int_{t_2}^{t_3} \left(-\frac{v_{max}}{t_{2,3}} \cdot (t - t_{0,3})\right) dt \]
+\[ s_3 = -\frac{v_{max}}{t_{2,3}} \cdot \int_{t_2}^{t_3} \left(t - t_3\right) dt = -\frac{v_{max}}{t_{2,3}} \cdot \left.\left(\frac{t^2}{2} - t \cdot t_3\right)\right|_{t_2}^{t_3} \]
+\[ s_3 = -\frac{v_{max}}{t_{2,3}} \cdot \left(\frac{{t_3}^2}{2} - {t_3}^2 - \frac{{t_2}^2}{2} + t_2 \cdot t_3\right) = -\frac{v_{max}}{t_{2,3}} \cdot \left(-\frac{{t_3}^2}{2} - \frac{{t_2}^2}{2} + t_2 \cdot t_3\right) \]
+\[ s_3 = -\frac{v_{max}}{t_{2,3}} \cdot \left(-\frac{(t_{2,3} - t_2)^2}{2} - \frac{{t_2}^2}{2} + t_2 \cdot (t_{2,3} - t_2)\right) \]
+\[ s_3 = -\frac{v_{max}}{t_{2,3}} \cdot \left(-\frac{{t_{2,3}}^2 - t_{2,3} t_2 + {t_2}^2}{2} - \frac{{t_2}^2}{2} + t_2 t_{2,3} + {t_2}^2\right) \]
+\[ s_3 = -\frac{v_{max}}{t_{2,3}} \cdot \left(-\frac{{t_{2,3}}^2}{2} + \frac{t_{2,3} t_2}{2} - \frac{{t_2}^2}{2} - \frac{{t_2}^2}{2} + t_2 t_{2,3} + {t_2}^2\right) \]
+\[ s_3 = -\frac{v_{max}}{t_{2,3}} \cdot \left(-\frac{{t_{2,3}}^2}{2} + \frac{t_{2,3} t_2}{2} + t_2 t_{2,3}\right) \]
+\[ s_3 = -v_{max} \cdot \left(-\frac{{t_{2,3}}}{2} + \frac{t_2}{2} + t_2\right) \]
+Fehler in der Berechnung von $s_3$. Korrekt wäre: 
+\[ s_3 = \frac{v_{max} \cdot t_{2,3}}{2} \]
+\[ s = s_1 + s_2 + s_3 = \frac{v_{max} \cdot {t_1}}{2} + v_{max} \cdot t_{1,2} + \frac{v_{max} \cdot t_{2,3}}{2} \]
+\[ \underline{\underline{s = v_{max} \cdot \left(\frac{{t_1}}{2} + t_{1,2} + \frac{t_{2,3}}{2}\right)}} \]
+b)
+\[ \underline{\underline{\overline{v} = \frac{s}{t_3} = \frac{s}{t_{1} + t_{1,2} + t_{2,3}}}} \]
+c)
+\[ v(t_{0_1}) = v(t_{0_2}) = \overline{v} \]
+\[ \rightarrow \frac{v_{max}}{t_1} \cdot t_{0_1} = \frac{s}{t_3} \]
+\[ \underline{\underline{\Rightarrow t_{0_1} = \frac{s \cdot t_1}{t_3 \cdot v_{max}}}} \]
+\[ \rightarrow -\frac{v_{max}}{t_{2,3}} \cdot (t_{0_2} - t_3) = \frac{s}{t_3} \]
+\[ t_{0_2} - t_3 = -\frac{s \cdot t_{2,3}}{t_3 \cdot v_{max}} \]
+\[ \underline{\underline{\Rightarrow t_{0_2} = \frac{s \cdot t_{2,3}}{t_3 \cdot v_{max}} + t_3 = \frac{s \cdot t_{2,3}}{t_3 \cdot v_{max}} + t_1 + t_{1,2} + t_{2,3}}} \]
