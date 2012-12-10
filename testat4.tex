@@ -94,7 +94,16 @@ b)
 \[ \underline{\underline{A =  A_{M_x} + A_B + A_D = \pi \left(\frac{1}{6} \left(\left( 4h + 4a + 1 \right)^{\frac{3}{2}} - \left(4a + 1\right)^{\frac{3}{2}}\right) + 2a + b\right)}} \]
 
 \section{Zykloide}
-\[  \]
+\[ x(t) = a \cdot (t - \sin(t) \]
+\[ y(t) = b \cdot (1 - \cos(t)) \]
+\[ \dot{x}(t) = a - a \cos(t) \]
+\[ \dot{y}(t) = b \sin(t) \]
+Folgend wird nur der Fall $a = b$ behandelt. In den bisherigen Versuchen war dies immer der Fall. \\Sollte dies einmal nicht der Fall sein $\rightarrow$ Bitte Nachricht an uns. Das wird dann ergänzt. 
+\[ S = \int_0^{2\pi} \sqrt{\dot{x}^2 + \dot{y}^2} dt = \int_0^{2\pi} \sqrt{(a - a \cos(t))^2 + (a \sin(t))^2} dt \]
+\[ S = \int_0^{2\pi} \sqrt{a^2 \cdot (1 - \cos(t))^2 + a^2 \sin(t)^2} dt = a \cdot \int_0^{2\pi} \sqrt{(1 - \cos(t))^2 + \sin(t)^2} dt \]
+\[ S = a \cdot \int_0^{2\pi} \sqrt{1 - 2 \cos(t) + \underbrace{\cos(t)^2 + \sin(t)^2}_1} dt = a \cdot \int_0^{2\pi} \sqrt{2 - 2 \cos(t)} dt \]
+Mit Taschenrechner auflösen: 
+\[ \underline{\underline{\Rightarrow S = 8 \cdot a}} \]
 
 \section{Fahrzeug}
 \includegraphics[width=0.8\textwidth]{bilder/fahrzeug_svg.pdf}
