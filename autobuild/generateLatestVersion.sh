@@ -11,10 +11,10 @@ echo new hash: $hash
 if [ x$(cat $currpwd/latesthash) = x$hash ]; then
  echo already latest version
 else
- make
+ pdflatex testat_main
  hash=$(git log | head -n1 | sed -e 's/ /\n/g' | tail -n1)
- cp fosa_main.pdf $currpwd/build/fosa_$hash.pdf
- cp fosa_main.pdf $currpwd/build/fosa_latest.pdf
+ cp testat_main.pdf $currpwd/build/testat_$hash.pdf
+ cp testat_main.pdf $currpwd/build/testat_latest.pdf
  cd $currpwd
  echo $hash > latesthash
 fi
